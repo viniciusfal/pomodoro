@@ -58,3 +58,33 @@ export const HistoryList = styled.div`
     padding: 1.5rem;
   }
 `
+
+// Setei as cores numa variável
+const STATUS_COLORS = {
+  green: 'green-500',
+  yellow: 'yellow-500',
+  red: 'red-500',
+} as const
+
+// Transformei a variável numa tipagem (interface)
+interface StatusProps {
+  statusColors: keyof typeof STATUS_COLORS
+}
+
+/*
+ * passei a tipagem como parametro do meu componente de Status e apliquei essa
+ * tipagem na hora de selecionar as cores presentes no meu tema
+ */
+export const Status = styled.span<StatusProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: ${(props) => props.theme[STATUS_COLORS[props.statusColors]]};
+  }
+`

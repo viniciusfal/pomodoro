@@ -37,11 +37,6 @@ export const BaseInput = styled.input`
   font-size: 1.125rem;
   padding: 0 0.5rem;
 
-  &:focus {
-    box-shadow: none;
-    border-color: ${(props) => props.theme['gray-500']};
-  }
-
   &::placeholder {
     color: ${(props) => props.theme['gray-500']};
   }
