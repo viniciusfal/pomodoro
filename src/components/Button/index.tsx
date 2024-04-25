@@ -1,5 +1,5 @@
-import { ButtonContainer } from './style'
+import { StartCountdownButton } from './style'
 
 export function Button() {
-  return <ButtonContainer></ButtonContainer>
+  return <StartCountdownButton></StartCountdownButton>
 }
