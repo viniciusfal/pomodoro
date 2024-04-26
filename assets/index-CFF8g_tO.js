@@ -268,7 +268,7 @@ Error generating stack: `+i.message+`
 
   display: flex;
   flex-direction: column;
-`;function Jv(){return N.jsxs(Xv,{children:[N.jsx(Zv,{}),N.jsx(Hy,{})]})}function qv(){return N.jsx(Ky,{children:N.jsxs(yi,{path:"/",element:N.jsx(Jv,{}),children:[N.jsx(yi,{path:"/",element:N.jsx(Gv,{})}),N.jsx(yi,{path:"/history",element:N.jsx(ov,{})})]})})}const bv={white:"#FFF","gray-100":"#E1E1E6","gray-300":"#C4C4CC","gray-400":"#8D8D99","gray-500":"#7C7C8A","gray-600":"#323238","gray-700":"#29292E","gray-800":"#202024","gray-900":"#121214","green-300":"#00B37E","green-500":"#00875F","green-700":"#015F43","red-500":"#AB222E","red-700":"#7A1921","yellow-500":"#FBA94C"},eg=b1`
+`;function Jv(){return N.jsxs(Xv,{children:[N.jsx(Zv,{}),N.jsx(Hy,{})]})}function qv(){return N.jsx(Ky,{children:N.jsxs(yi,{path:"/<pomodoro>",element:N.jsx(Jv,{}),children:[N.jsx(yi,{path:"/<pomodoro>",element:N.jsx(Gv,{})}),N.jsx(yi,{path:"/<pomodoro>/history",element:N.jsx(ov,{})})]})})}const bv={white:"#FFF","gray-100":"#E1E1E6","gray-300":"#C4C4CC","gray-400":"#8D8D99","gray-500":"#7C7C8A","gray-600":"#323238","gray-700":"#29292E","gray-800":"#202024","gray-900":"#121214","green-300":"#00B37E","green-500":"#00875F","green-700":"#015F43","red-500":"#AB222E","red-700":"#7A1921","yellow-500":"#FBA94C"},eg=b1`
   * {
     margin: 0;
     padding: 0;
