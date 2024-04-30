@@ -7,10 +7,10 @@ export function Header() {
     <HeaderContainer>
       <span>Logo</span>
       <nav>
-        <Link to="/" title="timer">
+        <Link to="/pomodoro" title="timer">
           <Timer size={24} />
         </Link>
-        <Link to="/history" title="Historico">
+        <Link to="/pomodoro/history" title="Historico">
           <Scroll size={24} />
         </Link>
       </nav>
