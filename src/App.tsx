@@ -14,6 +14,7 @@ function App() {
           <Router />
         </CycleContextProvider>
       </BrowserRouter>
+
       <GlobalStyle />
     </ThemeProvider>
   )

@@ -3,13 +3,11 @@ import { HistoryContainer, HistoryList, Status } from './style'
 import { CyclesContext } from '../../contexts/CycleContexts'
 
 export function History() {
-  const cycles = useContext(CyclesContext)
+  const { cycles } = useContext(CyclesContext)
 
   return (
     <HistoryContainer>
       <h1>Meu Histórico</h1>
-
-      <pre>{JSON.stringify(cycles, null, 2)}</pre>
 
       <HistoryList>
         <table>
@@ -22,58 +20,28 @@ export function History() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="green">Concluído</Status>
-              </td>
-            </tr>
+            {cycles.map((cycle) => {
+              return (
+                <tr key={cycle.id}>
+                  <td>{cycle.task}</td>
+                  <td>{cycle.minutesAmount} Minutos</td>
+                  <td>{cycle.startDate.toISOString()}</td>
+                  <td>
+                    {cycle.finishDate && (
+                      <Status statusColors="green">Concluído</Status>
+                    )}
 
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="green">Concluído</Status>
-              </td>
-            </tr>
+                    {cycle.interruptedDate && (
+                      <Status statusColors="red">Interrompido</Status>
+                    )}
 
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="yellow">Concluído</Status>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="red">Concluído</Status>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="red">Concluído</Status>
-              </td>
-            </tr>
-            <tr>
-              <td>Conserto de débitos tecnicos</td>
-              <td>25 minutos</td>
-              <td>Há cerca de 2 meses</td>
-              <td>
-                <Status statusColors="yellow">Concluído</Status>
-              </td>
-            </tr>
+                    {!cycle.finishDate && !cycle.interruptedDate && (
+                      <Status statusColors="yellow">Em andamento</Status>
+                    )}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </HistoryList>
